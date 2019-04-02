@@ -97,7 +97,7 @@ public class Web3jService implements BlockchainService {
                 DefaultBlockParameterName.LATEST, eventFilter.getContractAddress());
 
         if (eventFilter.getEventSpecification() != null) {
-            ethFilter = ethFilter.addSingleTopic(Web3jUtil.getSignature(eventSpec));
+            ethFilter = ethFilter.addOptionalTopics(Web3jUtil.getSignature(eventSpec));
         }
 
         final Observable<Log> observable = web3j.ethLogObservable(ethFilter);
