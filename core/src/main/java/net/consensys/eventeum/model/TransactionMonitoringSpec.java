@@ -7,8 +7,10 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.web3j.crypto.Hash;
 
+@Document
 @Entity
 @Data
 @NoArgsConstructor
