@@ -78,6 +78,15 @@ public class RegistrationIT extends BaseKafkaIntegrationTest {
     }
 
     @Test
+    public void testListEventFiltersEmptyResponse() {
+        final ContractEventFilter filter = createDummyEventFilter(FAKE_CONTRACT_ADDRESS);
+
+	List<ContractEventFilter> contractEventFilters = listEventFilters();
+
+	assertEquals(0, contractEventFilters.size());
+    }
+
+    @Test
     public void testRegisterEventFilterReturnsCorrectId() {
         final ContractEventFilter registeredFilter = registerDummyEventFilter(FAKE_CONTRACT_ADDRESS);
 

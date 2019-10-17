@@ -223,12 +223,7 @@ eventFilters:
 
 -   **URL:** `/api/rest/v1/event-filter`    
 -   **Method:** `GET`
--   **Headers:**  
-
-| Key | Value |
-| -------- | -------- |
-| accept | application/json |
-
+-   **Headers:** `N/A`
 -   **URL Params:** `N/A`
 
 -   **Response:** List of contract event filters:
@@ -263,8 +258,7 @@ eventFilters:
 	"correlationIdStrategy": {
 		"type": "NON_INDEXED_PARAMETER",
 		"parameterIndex": 0 }
-}
-]
+}]
 ```
 
 ## Registering a Transaction Monitor
