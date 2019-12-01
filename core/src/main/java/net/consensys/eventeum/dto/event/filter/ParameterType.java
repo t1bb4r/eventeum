@@ -21,6 +21,8 @@ import net.consensys.eventeum.service.exception.ValidationException;
 import org.springframework.data.annotation.PersistenceConstructor;
 
 import javax.persistence.Embeddable;
+
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,7 +34,7 @@ import java.util.Map;
 @Embeddable
 @NoArgsConstructor
 @EqualsAndHashCode
-public class ParameterType {
+public class ParameterType implements Serializable{
 
     public static final String INT = "INT";
     public static final String UINT = "UINT";

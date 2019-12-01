@@ -85,7 +85,11 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+<<<<<<< 7d10d57cd701b8320afe6fc702362d776d93b7ca
             <version>1.18.8</version>
+=======
+            <version>1.18.0</version>
+>>>>>>> First Draft of HazelCast for multiinstance messaging
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -130,6 +134,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+	<dependency>
+	    <groupId>com.hazelcast</groupId>
+	    <artifactId>hazelcast</artifactId>
+	    <version>3.11</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.hazelcast</groupId>
+	    <artifactId>hazelcast-kubernetes</artifactId>
+	    <version>1.3.1</version>
+	</dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

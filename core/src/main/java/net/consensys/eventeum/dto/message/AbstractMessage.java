@@ -14,6 +14,8 @@
 
 package net.consensys.eventeum.dto.message;
 
+import java.io.Serializable;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,7 +23,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public abstract class AbstractMessage<T> implements EventeumMessage<T> {
+public abstract class AbstractMessage<T> implements EventeumMessage<T>, Serializable{
 
     private String id;
 

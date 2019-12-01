@@ -14,6 +14,8 @@
 
 package net.consensys.eventeum.dto.message;
 
+import java.io.Serializable;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
@@ -41,7 +43,7 @@ import net.consensys.kafkadl.message.RetryableMessage;
         @JsonSubTypes.Type(value = TransactionMonitorRemoved.class, name = TransactionMonitorRemoved.TYPE)
 })
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public interface EventeumMessage<T> extends RetryableMessage {
+public interface EventeumMessage<T> extends RetryableMessage, Serializable{
     String getId();
 
     String getType();
